@@ -87,7 +87,9 @@ webserver2
 
 B. Creating the new html file
 
-i. I created a new file using `sudo vi index.html` on both servers and pasted the code `         <!DOCTYPE html>
+i. I created a new file using `sudo vi index.html` on both servers and pasted the code
+
+        <!DOCTYPE html>
         <html>
         <head>
             <title>My EC2 Instance</title>
@@ -96,7 +98,10 @@ i. I created a new file using `sudo vi index.html` on both servers and pasted th
             <h1>Welcome to my EC2 instance</h1>
             <p>Public IP: YOUR_PUBLIC_IP</p>
         </body>
-        </html>` into the file and input my ip address in the space of public ip and saved the file.
+        </html>
+
+
+ into the file and input my ip address in the space of public ip and saved the file.
 
  webserver1
 
