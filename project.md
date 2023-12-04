@@ -87,7 +87,7 @@ webserver2
 
 B. Creating the new html file
 
-i. I created a new file using `sudo vi index.html` on both servers and pasted the code
+i. I created a new file using `sudo vi index.html` on both servers and pasted the code into the file and input my ip address in the space of public ip and saved the file.
 
         <!DOCTYPE html>
         <html>
@@ -101,7 +101,7 @@ i. I created a new file using `sudo vi index.html` on both servers and pasted th
         </html>
 
 
- into the file and input my ip address in the space of public ip and saved the file.
+ 
 
  webserver1
 
