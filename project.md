@@ -20,19 +20,25 @@ I installed apache on the two webservers by run `sudo apt update -y &&  sudo apt
 on each server.
 
 webserver1
+
 ![apt update status](./images/3a.PNG)
+
 ![apt update status](./images/3b.PNG)
 
 webserver2
+
 ![apt update status](./images/4a.PNG)
+
 ![apt update status](./images/4b.PNG)
 
 After the installation, I run ` sudo systemctl status apache2` to verify that apache is running on both servers.
 
 webserver1
+
 ![apt update status](./images/3c.PNG)
 
 webserver2
+
 ![apt update status](./images/4c.PNG)
 
 ### Step 4
@@ -44,29 +50,39 @@ A. Configuring Apache on the both webservers to serve content on port 8000
 i. I opened this file `sudo vi /etc/apache2/ports.conf` to add a new listen directive for port 8000 and then saved the file.
 
 webserver1
+
 ![apt update status](./images/5a.PNG)
+
 ![apt update status](./images/5b.PNG)
 
 webserver2
+
 ![apt update status](./images/6a.PNG)
+
 ![apt update status](./images/6b.PNG)
 
 ii. I opened the second config file too to edit virtual host from 8o to 8000 by running `sudo vi /etc/apache2/sites-available/000-default.conf`
 
 webserver1
+
 ![apt update status](./images/7a.PNG)
+
 ![apt update status](./images/7b.PNG)
 
 webserver2
+
 ![apt update status](./images/8a.PNG)
+
 ![apt update status](./images/8b.PNG)
 
 iii. I restarted the apache to load the new configuration using `sudo systemctl restart apache2`
 
 webserver1
+
 ![apt update status](./images/9.PNG)
 
 webserver2
+
 ![apt update status](./images/10.PNG)
 
 B. Creating the new html file
@@ -83,37 +99,49 @@ i. I created a new file using `sudo vi index.html` on both servers and pasted th
         </html>` into the file and input my ip address in the space of public ip and saved the file.
 
  webserver1
+
 ![apt update status](./images/11a.PNG)
+
 ![apt update status](./images/11b.PNG)
 
 webserver2
-![apt update status](./images/12a.PNG)      
+
+![apt update status](./images/12a.PNG)  
+
 ![apt update status](./images/12b.PNG)
 
 ii. I changed the ownership of the file on both servers by running `sudo chown www-data:www-data ./index.html` 
 
 webserver1
+
 ![apt update status](./images/13.PNG)
 
 webserver2
+
 ![apt update status](./images/14.PNG)
 
 C. To override the default html file of Apahe webserver, i run ` sudo cp -f ./index.html /var/www/html/index.html` on both servers and then restarted Apache to load the new configuration using `sudo systemctl restart apache2`
 
 webserver1
+
 ![apt update status](./images/15.PNG)
+
 ![apt update status](./images/17.PNG)
 
 webserver2
+
 ![apt update status](./images/16.PNG)
+
 ![apt update status](./images/18.PNG)
 
 Then, I texted the ip address on the broswer
 
 webserver1
+
 ![apt update status](./images/19.PNG)
 
 webserver2
+
 ![apt update status](./images/20.PNG)
 
 ### Step 5
@@ -129,6 +157,7 @@ ii. Logged into the server on the terminal using ssh
 iii. Updated the softwares and installed Nginx using ` sudo apt update -y && sudo apt install nginx -y` 
 
 ![apt update status](./images/23a.PNG)
+
 ![apt update status](./images/23b.PNG)
 
 iv. Verified that Nginx is installed using `sudo systemctl status nginx`
@@ -160,6 +189,7 @@ Paste the code inside the file
         }
     
 ![apt update status](./images/25a.PNG)
+
 ![apt update status](./images/25b.PNG)
 
 vi. Test that the configuration is ok `sudo nginx -t`
